@@ -7,3 +7,13 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+
+
+{% if user_info %}
+<p> {{ user_info }} </p>
+<a href="/polls/logout">Logout</a>
+{% else %}
+<p> Please login to continue </p>
+<a href="/polls/login">Login</a>
+{%endif%}
+
