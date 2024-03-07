@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Question, Choice, PollUser
+from .models import Question, Choice, PollUser, ApiKey
 
 class ChoiceInline(admin.TabularInline):
     model = Choice
@@ -27,3 +27,4 @@ class QuestionAdmin(admin.ModelAdmin):
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Choice)
 admin.site.register(PollUser)
+admin.site.register(ApiKey)

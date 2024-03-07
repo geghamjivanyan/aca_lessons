@@ -44,4 +44,10 @@ class PollUser(models.Model):
         return "{} {}".format(self.user.first_name, self.user.last_name)
 
 
+class ApiKey(models.Model):
+    username = models.CharField(max_length=50)
+    api_key = models.CharField(max_length=20)
+
+    def __str__(self):
+        return "{} - {}".format(self.username, self.api_key)
 
